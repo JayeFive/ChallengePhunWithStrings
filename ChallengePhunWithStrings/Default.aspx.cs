@@ -12,6 +12,7 @@ public partial class _Default : System.Web.UI.Page
         Problem1();
         Problem2();
         Problem3();
+        Problem4();
     }
 
     // 1. Reverse your name
@@ -65,9 +66,20 @@ public partial class _Default : System.Web.UI.Page
 
         ResultLabel3.Text = output;
     }
-
+    
+    // Should read: Now is the time for all good men to come to the aid of their country.
     private void Problem4()
     {
+        string puzzle = "NOW IS ZHEremove-me ZIME FOR ALL GOOD MEN ZO COME ZO ZHE AID OF ZHEIR COUNZRY.";
+        int index;
 
+        index = puzzle.IndexOf("remove-me");
+        puzzle = puzzle.Remove(index, ("remove-me").Length);
+        puzzle = puzzle.ToLower().Replace('z', 't');
+        puzzle = puzzle.First().ToString().ToUpper() + puzzle.Substring(1);
+
+        ResultLabel4.Text = puzzle;
     }
+
+    
 }
