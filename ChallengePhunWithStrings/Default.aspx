@@ -13,6 +13,9 @@
             <br />
             <br />
             <asp:Label ID="ResultLabel2" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:Label ID="ResultLabel3" runat="server"></asp:Label>
         </div>
     </form>
 </body>
